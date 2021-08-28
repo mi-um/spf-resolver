@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Rephlux\SpfResolver;
+namespace Mium\SpfResolver;
 
 /**
  * A Spf Resolver for PHP.
