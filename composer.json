@@ -16,7 +16,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"Rephlux\\SpfResolver\\" : "src/"
+			"Mium\\SpfResolver\\" : "src/"
 		}
 	}
 }
