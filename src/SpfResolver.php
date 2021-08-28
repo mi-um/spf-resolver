@@ -66,10 +66,20 @@ class SpfResolver
             return $this->getIpAddresses();
         }
 
+        return $this->resolveSpfData();
+    }
+
+    /**
+     * Resolves the set spf data string and return the list of IPs
+     * 
+     * @return array
+     */
+    public function resolveSpfData()
+    {
         return $this->extractIpAdresses()
-                    ->followRedirects()
-                    ->extractInclude()
-                    ->getIpAddresses();
+            ->followRedirects()
+            ->extractInclude()
+            ->getIpAddresses();
     }
 
     /**
@@ -93,6 +103,18 @@ class SpfResolver
     public function getIpAddresses()
     {
         return array_values(array_unique($this->ipAddresses));
+    }
+    
+    /**
+     * Set the spf data
+     * 
+     * @param string $spfData
+     * @return $this
+     */
+    public function setSpfData(string $spfData)
+    {
+        $this->spfData = $spfData;
+        return $this;
     }
 
     /**
